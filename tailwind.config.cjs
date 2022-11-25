@@ -2,7 +2,14 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    fontFamily: {
+      BloodCrow: ['Blood Crow', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        primary: '#1e293b',
+      },
+    },
   },
   plugins: [],
 };
