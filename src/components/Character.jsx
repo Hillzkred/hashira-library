@@ -53,11 +53,13 @@ export default function Characters({ characterName }) {
     <div>
       <div className='text-white' key={id}>
         <div className='py-5' />
-        <img src={large} />
-        <h3>
-          {first} {last}
-        </h3>
-        <p>{description}</p>
+        <div>
+          <img src={large} />
+          <h3 className='text-justify'>
+            {first} {last}
+          </h3>
+          <p className='text-justify'>{description}</p>
+        </div>
       </div>
     </div>
   );
