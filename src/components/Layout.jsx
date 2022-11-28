@@ -18,13 +18,13 @@ export default function Layout() {
   return (
     <div>
       <div className='max-w-5xl m-auto'>
-        <div className='py-5' />
-        <Heading />
-        <div className='grid grid-rows-4'>
+        <div className='py-4' />
+        <div className='grid grid-cols-3 gap-4'>
           {characters.map((character) => (
             <Character key={character} characterName={character} />
           ))}
         </div>
+        <div className='py-4' />
       </div>
     </div>
   );
