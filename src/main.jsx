@@ -10,7 +10,7 @@ import {
 } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://flyby-gateway.herokuapp.com/',
+  uri: 'https://graphql.anilist.co/',
   cache: new InMemoryCache(),
 });
 
@@ -18,11 +18,28 @@ client
   .query({
     query: gql`
       query GetLocations {
-        locations {
+        Character(search: "Giyuu") {
           id
-          name
+          name {
+            first
+            middle
+            last
+            full
+            native
+            userPreferred
+          }
+          image {
+            large
+            medium
+          }
           description
-          photo
+          gender
+          dateOfBirth {
+            year
+            month
+            day
+          }
+          age
         }
       }
     `,
